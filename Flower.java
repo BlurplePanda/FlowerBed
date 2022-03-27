@@ -61,4 +61,16 @@ public class Flower
     public void setBottom() {
         this.bottom = this.flowerY + this.flowerHeight;
     }
+    
+    public void draw() {
+        // draw stem
+        UI.setColor(Color.green); // set colour of stem (to green)
+        UI.setLineWidth(2); // set width of stem
+        UI.drawLine(flowerX, flowerY, flowerX, bottom);
+        
+        // draw flower
+        UI.setColor(this.color); // set the flower colour
+        UI.fillOval(left, top, flowerSize, flowerSize); // draw flower
+        UI.sleep(500); // wait
+    }
 }
