@@ -79,7 +79,7 @@ public class Flower
      */
     public void erase() {
         final int BUFFER = 1;
-        UI.eraseRect(left, top, flowerSize + BUFFER, bottom + BUFFER);
+        UI.eraseRect(left, top, flowerSize + BUFFER, flowerHeight + flowerSize / 2 + BUFFER);
     }
     
     /**
