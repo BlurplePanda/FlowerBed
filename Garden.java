@@ -24,7 +24,7 @@ public class Garden
         f1 = new Flower(50, 100, 20, 20, Color.blue);
         f2 = new Flower(100, 100, 25, 25, Color.pink);
         f3 = new Flower(150, 100, 15, 15, Color.red);
-        f4 = new Flower( 100, 150, 15, 15, Color.black);
+        f4 = new Flower(100, 150, 15, 15, Color.black);
         
         // draw in the flowers to start
         f1.draw();
@@ -33,11 +33,16 @@ public class Garden
         f4.draw();
         
         // grow our garden
-        f2.grow();
-        f3.grow();
-        f2.grow();
-        f1.grow();
-        f3.grow();
-        f4.grow();
+        // f2.grow();
+        // f3.grow();
+        // f2.grow();
+        // f1.grow();
+        // f3.grow();
+        // f4.grow();
+        
+        UI.addButton("Grow blue flower", f1::grow);
+        UI.addButton("Grow pink flower", f2::grow);
+        UI.addButton("Grow red flower", f3::grow);
+        UI.addButton("Grow black flower", f4::grow);
     }
 }
