@@ -39,7 +39,7 @@ public class ClickGarden
         }
         
         // set up mouse
-        //UI.setMouseListener(this::doMouse);
+        UI.setMouseListener(this::doMouse);
     }
     
     /**
@@ -49,6 +49,21 @@ public class ClickGarden
         for (int i = 0; i < 10; i++) {
             int randomFlower = (int) (Math.random() * MAXFLOWERS); // choose a random flower
             flowerBed[randomFlower].grow(); // make the random flower grow
+        }
+    }
+    
+    /**
+     * Select object based on where the user clicks
+     */
+    private void doMouse(String action, double x, double y) {
+        if (action.equals("clicked")) {
+            // check the location of the x and y against the location of the object
+            for (Flower flower : flowerBed) {
+                if ((x >= flower.getLeft()) && (x <= flower.getRight()) &&
+                    (y >= flower.getTop()) && (y <= flower.getBottom())) {
+                        flower.grow();
+                    }
+            }
         }
     }
 }
