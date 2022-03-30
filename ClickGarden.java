@@ -39,8 +39,16 @@ public class ClickGarden
         }
         
         // set up mouse
-        UI.setMouseListener(this::doMouse);
+        //UI.setMouseListener(this::doMouse);
     }
     
-    
+    /**
+     * Randomly grow the flowers in the array
+     */
+    public void randomGrow() {
+        for (int i = 0; i < 10; i++) {
+            int randomFlower = (int) (Math.random() * MAXFLOWERS); // choose a random flower
+            flowerBed[randomFlower].grow(); // make the random flower grow
+        }
+    }
 }
