@@ -48,6 +48,17 @@ public class Flower
         this.left = this.flowerX - this.flowerSize / 2;
     }
     
+    public double getLeft() {
+        return this.left;
+    }
+    
+    /**
+     * Get right
+     */
+    public double getRight() {
+        return this.left + this.flowerSize;
+    }
+    
     /**
      * Set top
      */
@@ -55,11 +66,19 @@ public class Flower
         this.top = this.flowerY - this.flowerSize / 2;
     }
     
+    public double getTop() {
+        return this.top;
+    }
+    
     /**
      * Set bottom
      */
     public void setBottom() {
         this.bottom = this.flowerY + this.flowerHeight;
+    }
+    
+    public double getBottom() {
+        return this.bottom;
     }
     
     public void draw() {
